@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    the action for the menu-->
+    <record id="cheque_format_acton" model="ir.actions.act_window">
+        <field name="name">cheque.format.action</field>
+        <field name="res_model">cheque.format</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!--    create menutitem-->
+    <menuitem id="id_cheque_format" parent="account.menu_finance_configuration" action="cheque_format_acton" name="Default Cheque Format">
+
+    </menuitem>
+
+
+</odoo>
