@@ -7,343 +7,347 @@
                 <t t-foreach="docs" t-as="o">
                     <div t-att-data-oe-model="o._name" t-att-data-oe-id="o.id" t-foreach="o._check_get_pages()"
                          t-as="page" class="page article ckca_page">
-<!--                    <div t-attf-style="margin-left:140px;margin-top:250px;position:absolute;};"-->
-<!--                    >***-->
-<!--                        <field t-field="o.check_amount_in_words"/>***-->
-<!--                    </div>-->
-<!--                    <div t-attf-style="margin-left:570px;margin-top:300px;position:absolute;};"-->
-<!--                    >-->
+                        <!--                    <div t-attf-style="margin-left:140px;margin-top:250px;position:absolute;};"-->
+                        <!--                    >***-->
+                        <!--                        <field t-field="o.check_amount_in_words"/>***-->
+                        <!--                    </div>-->
+                        <!--                    <div t-attf-style="margin-left:570px;margin-top:300px;position:absolute;};"-->
+                        <!--                    >-->
 
-<!--                        <field t-field="o.amount"/>-->
-<!--                    </div>-->
-<!--                    <div t-attf-style="margin-left:600px;margin-top:25px;position:absolute;};">-->
-<!--                        <field t-field="o.date"/>-->
-<!--                    </div>-->
-<!--                    <div t-attf-style="margin-left:70px;margin-top:210px;position:absolute;};">-->
+                        <!--                        <field t-field="o.amount"/>-->
+                        <!--                    </div>-->
+                        <!--                    <div t-attf-style="margin-left:600px;margin-top:25px;position:absolute;};">-->
+                        <!--                        <field t-field="o.date"/>-->
+                        <!--                    </div>-->
+                        <!--                    <div t-attf-style="margin-left:70px;margin-top:210px;position:absolute;};">-->
 
-<!--                        <field t-field="o.partner_id.name"/>-->
-<!--                    </div>-->
-                    <!--                        <field t-esc="amount_word(o)[0]"/>-->
-<!--                    <field t-esc="default_format"/>-->
-<!--                    <field t-esc="default_format.name"/>-->
-<!--                    <field t-esc="default_format.date_m_top"/>-->
-<!--                    <field t-esc="default_format.is_amount_word"/>-->
+                        <!--                        <field t-field="o.partner_id.name"/>-->
+                        <!--                    </div>-->
+                        <!--                        <field t-esc="amount_word(o)[0]"/>-->
+                        <!--                    <field t-esc="default_format"/>-->
+                        <!--                    <field t-esc="default_format.name"/>-->
+                        <!--                    <field t-esc="default_format.date_m_top"/>-->
+                        <!--                    <field t-esc="default_format.is_amount_word"/>-->
 
 
-                    <div class="row"
-                         t-attf-style="font-size:#{default_format.font_size}px;color:#{default_format.color};};">
-                        <t t-if="default_format.is_date">
-                            <t t-if="default_format.date_formate == 'dd_mm'">
+                        <div class="row"
+                             t-attf-style="font-size:#{default_format.font_size}px;color:#{default_format.color};};">
+                            <t t-if="default_format.is_date">
+                                <t t-if="default_format.date_formate == 'dd_mm'">
                                     <div t-attf-style="margin-left:#{default_format.f_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                <span t-field="o.date"/>
-                                </div>
+                                        <span t-field="o.date"/>
+                                    </div>
 
-<!--                                <div t-attf-style="margin-left:#{default_format.s_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
-<!--                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>-->
-<!--                                </div>-->
-<!--                                <div t-attf-style="margin-left:#{default_format.t_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
-<!--                                    &lt;!&ndash;                                <span t-esc="date[1][0]"/>&ndash;&gt;-->
-<!--                                </div>-->
+                                    <!--                                <div t-attf-style="margin-left:#{default_format.s_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
+                                    <!--                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>-->
+                                    <!--                                </div>-->
+                                    <!--                                <div t-attf-style="margin-left:#{default_format.t_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
+                                    <!--                                    &lt;!&ndash;                                <span t-esc="date[1][0]"/>&ndash;&gt;-->
+                                    <!--                                </div>-->
 
-<!--                                <div t-attf-style="margin-left:#{default_format.fo_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
-<!--                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>-->
-<!--                                </div>-->
+                                    <!--                                <div t-attf-style="margin-left:#{default_format.fo_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">-->
+                                    <!--                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>-->
+                                    <!--                                </div>-->
+                                </t>
+                                <t t-if="default_format.date_formate == 'mm_dd'">
+                                    <div t-attf-style="margin-left:#{default_format.f_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.s_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                        <span style="margin-left:3px" t-esc="default_format.date_seprator"/>
+                                    </div>
+                                    <div t-attf-style="margin-left:#{default_format.t_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.fo_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                        <span style="margin-left:3px" t-esc="default_format.date_seprator"/>
+                                    </div>
+                                </t>
+                                <t t-if="default_format.year_formate == 'yy'">
+
+                                    <div t-attf-style="margin-left:#{default_format.fi_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.si_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+
+                                    </div>
+
+                                </t>
+                                <t t-if="default_format.year_formate == 'yyyy'">
+
+                                    <div t-attf-style="margin-left:#{default_format.fi_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.si_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.se_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                    <div t-attf-style="margin-left:#{default_format.e_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
+                                    </div>
+
+                                </t>
                             </t>
-                            <t t-if="default_format.date_formate == 'mm_dd'">
-                                <div t-attf-style="margin-left:#{default_format.f_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
 
-                                <div t-attf-style="margin-left:#{default_format.s_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>
-                                </div>
-                                <div t-attf-style="margin-left:#{default_format.t_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
-
-                                <div t-attf-style="margin-left:#{default_format.fo_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                    <span style="margin-left:3px" t-esc="default_format.date_seprator"/>
-                                </div>
-                            </t>
-                            <t t-if="default_format.year_formate == 'yy'">
-
-                                <div t-attf-style="margin-left:#{default_format.fi_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-
-                                </div>
-
-                                <div t-attf-style="margin-left:#{default_format.si_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-
-                                </div>
-
-                            </t>
-                            <t t-if="default_format.year_formate == 'yyyy'">
-
-                                <div t-attf-style="margin-left:#{default_format.fi_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
-
-                                <div t-attf-style="margin-left:#{default_format.si_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
-
-                                <div t-attf-style="margin-left:#{default_format.se_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
-
-                                <div t-attf-style="margin-left:#{default_format.e_d_m_left}px;margin-top:#{default_format.date_m_top}px;position: absolute;};">
-                                </div>
-
-                            </t>
-                        </t>
-
-                        <!-- Print Partner Name in Cheque -->
-                        <t t-if="default_format.is_partner">
-                            <div t-attf-style="margin-left:#{default_format.partner_m_left}px;margin-top:#{default_format.partner_m_top}px;position: absolute;};"
-                                 class="col-8">
-                            <span t-field="o.partner_id.name"/>
-
-                            </div>
-                        </t>
-
-                        <!-- Print Partner Address -->
-                        <span t-if="o.partner_id">
-                            <t t-if="default_format.print_partner_address">
-                                <div t-attf-style="margin-left:#{default_format.partner_address_left_margin}px;margin-top:#{default_format.partner_address_top_margin}px;position: absolute;};"
+                            <!-- Print Partner Name in Cheque -->
+                            <t t-if="default_format.is_partner">
+                                <div t-attf-style="margin-left:#{default_format.partner_m_left}px;margin-top:#{default_format.partner_m_top}px;position: absolute;};"
                                      class="col-8">
-                                    <span t-if="o.partner_id.name">
-                                        <span style="text-transform: capitalize" t-esc="o.partner_id.name"/>
-                                        <br/>
-                                    </span>
-                                    <span t-if="o.partner_id.street">
-                                        <span style="text-transform: capitalize" t-esc="o.partner_id.street"/>
-                                        <br/>
-                                    </span>
-                                    <span t-if="o.partner_id.street2">
-                                        <span style="text-transform: capitalize" t-esc="o.partner_id.street2"/>
-                                        <br/>
-                                    </span>
-                                    <span t-if="o.partner_id.city">
-                                        <span style="text-transform: capitalize" t-esc="o.partner_id.city"/>,&#160;
-                                    </span>
-                                    <span t-if="o.partner_id.state_id">
-                                        <span style="text-transform: capitalize" t-esc="o.partner_id.state_id.name"/>,&#160;
-                                    </span>
-                                    <span t-if="o.partner_id.zip">
-                                        <span t-esc="o.partner_id.zip"/>
-                                    </span>
+                                    <span t-field="o.partner_id.name"/>
+
                                 </div>
                             </t>
-                        </span>
 
-                        <t t-if="default_format.is_print_footer_text">
-                            <t t-if="default_format.cheque_footer_text">
-                                <div t-attf-style="font-size:#{default_format.footer_font_size}px;margin-left:#{default_format.footer_m_left}px;margin-top:#{default_format.footer_m_top}px;position: absolute;};">
-                                    <t t-if="default_format.is_footer_text_bold">
-                                        <span style="font-weight:bold;text-transform: capitalize" class="micrenc"
-                                              t-esc="get_footer_text(default_format.cheque_footer_text,o.cheque_no)"/>
+                            <!-- Print Partner Address -->
+                            <span t-if="o.partner_id">
+                                <t t-if="default_format.print_partner_address">
+                                    <div t-attf-style="margin-left:#{default_format.partner_address_left_margin}px;margin-top:#{default_format.partner_address_top_margin}px;position: absolute;};"
+                                         class="col-8">
+                                        <span t-if="o.partner_id.name">
+                                            <span style="text-transform: capitalize" t-esc="o.partner_id.name"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="o.partner_id.street">
+                                            <span style="text-transform: capitalize" t-esc="o.partner_id.street"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="o.partner_id.street2">
+                                            <span style="text-transform: capitalize" t-esc="o.partner_id.street2"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="o.partner_id.city">
+                                            <span style="text-transform: capitalize" t-esc="o.partner_id.city"/>,&#160;
+                                        </span>
+                                        <span t-if="o.partner_id.state_id">
+                                            <span style="text-transform: capitalize"
+                                                  t-esc="o.partner_id.state_id.name"/>,&#160;
+                                        </span>
+                                        <span t-if="o.partner_id.zip">
+                                            <span t-esc="o.partner_id.zip"/>
+                                        </span>
+                                    </div>
+                                </t>
+                            </span>
+
+                            <t t-if="default_format.is_print_footer_text">
+                                <t t-if="default_format.cheque_footer_text">
+                                    <div t-attf-style="font-size:#{default_format.footer_font_size}px;margin-left:#{default_format.footer_m_left}px;margin-top:#{default_format.footer_m_top}px;position: absolute;};">
+                                        <t t-if="default_format.is_footer_text_bold">
+                                            <span style="font-weight:bold;text-transform: capitalize" class="micrenc"
+                                                  t-esc="get_footer_text(default_format.cheque_footer_text,o.cheque_no)"/>
+                                        </t>
+                                        <t t-if="not default_format.is_footer_text_bold">
+                                            <span style="text-transform: capitalize" class="micrenc"
+                                                  t-esc="get_footer_text(default_format.cheque_footer_text,o.cheque_no)"/>
+                                        </t>
+                                    </div>
+                                </t>
+                            </t>
+
+
+                            <t t-if="default_format.is_acc_pay">
+                                <div t-attf-style="margin-left:#{default_format.acc_pay_m_left}px;margin-top:#{default_format.acc_pay_m_top}px;position: absolute;};">
+                                    <div class='rotate text-center' style="width:60px;font-size:12px">
+                                        A/C PAY
+                                    </div>
+                                </div>
+                            </t>
+
+                            <!-- Print Amount in Digit In Cheque -->
+                            <t t-if="default_format.is_amount">
+                                <div t-attf-style="margin-left:#{default_format.amt_m_left}px;margin-top:#{default_format.amt_m_top}px;position: absolute;};">
+                                    <t t-if="default_format.is_star">
+                                        ***
                                     </t>
-                                    <t t-if="not default_format.is_footer_text_bold">
-                                        <span style="text-transform: capitalize" class="micrenc"
-                                              t-esc="get_footer_text(default_format.cheque_footer_text,o.cheque_no)"/>
+                                    <t t-if="default_format.is_currency">
+                                        <span t-field="o.amount"
+                                              t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                    </t>
+                                    <t t-if="not default_format.is_currency">
+                                        <span t-esc="'%.2f'%(o.amount)"/>
+                                    </t>
+
+                                    <t t-if="default_format.is_star">
+                                        ***
+                                    </t>
+
+                                </div>
+                            </t>
+
+
+                            <!-- Print Amount in Word In Cheque -->
+                            <t t-if="default_format.is_amount_word">
+                                <div t-attf-style="margin-left:#{default_format.amt_w_m_left}px;margin-top:#{default_format.amt_w_m_top}px;position: absolute;};"
+                                     class="col-8">
+                                    <t t-if="default_format.is_word_bold">
+                                        <span style="font-weight:bold;text-transform: capitalize"
+                                              t-esc="amount_word(o.check_amount_in_words,default_format.word_in_f_line)"/>
+                                    </t>
+                                    <t t-if="not default_format.is_word_bold">
+                                        <span style="text-transform: capitalize"
+                                              t-esc="amount_word(o.check_amount_in_words,default_format.word_in_f_line)[0]"/>
+                                    </t>
+                                </div>
+                                <div t-attf-style="margin-left:#{default_format.amt_w_s_m_left}px;margin-top:#{default_format.amt_w_s_m_top}px;position: absolute;};"
+                                     class="col-8">
+                                    <t t-if="default_format.is_word_bold">
+                                        <span style="font-weight:bold;text-transform: capitalize"
+                                              t-esc="o.check_amount_in_words"/>
+                                    </t>
+                                    <t t-if="not default_format.is_word_bold">
+                                        <span style="text-transform: capitalize"
+                                              t-esc="amount_word(o.check_amount_in_words,default_format.word_in_f_line)[1]"/>
                                     </t>
                                 </div>
                             </t>
-                        </t>
 
 
-                        <t t-if="default_format.is_acc_pay">
-                            <div t-attf-style="margin-left:#{default_format.acc_pay_m_left}px;margin-top:#{default_format.acc_pay_m_top}px;position: absolute;};">
-                                <div class='rotate text-center' style="width:60px;font-size:12px">
-                                    A/C PAY
+                            <t t-if="default_format.is_company">
+                                <div t-attf-style="margin-left:#{default_format.c_margin_left}px;margin-top:#{default_format.c_margin_top}px;position: absolute;};"
+                                     class="col-4">
+                                    <span style="text-transform: capitalize" t-esc="o.company_id.name"/>
                                 </div>
-                            </div>
-                        </t>
+                            </t>
 
-                        <!-- Print Amount in Digit In Cheque -->
-                        <t t-if="default_format.is_amount">
-                            <div t-attf-style="margin-left:#{default_format.amt_m_left}px;margin-top:#{default_format.amt_m_top}px;position: absolute;};">
-                                <t t-if="default_format.is_star">
-                                    ***
-                                </t>
-                                <t t-if="default_format.is_currency">
-                                    <span t-field="o.amount"
-                                          t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
-                                </t>
-                                <t t-if="not default_format.is_currency">
-                                    <span t-esc="'%.2f'%(o.amount)"/>
-                                </t>
-
-                                <t t-if="default_format.is_star">
-                                    ***
-                                </t>
-
-                            </div>
-                        </t>
+                            <t t-if="default_format.is_cheque_no and o.cheque_no">
+                                <div t-attf-style="margin-left:#{default_format.cheque_margin_left}px;margin-top:#{default_format.cheque_margin_top}px;position: absolute;};"
+                                     class="col-4">
+                                    Cheque No.
+                                    <span t-esc="o.cheque_no"/>
+                                </div>
+                            </t>
 
 
-                        <!-- Print Amount in Word In Cheque -->
-                        <t t-if="default_format.is_amount_word">
-                            <div t-attf-style="margin-left:#{default_format.amt_w_m_left}px;margin-top:#{default_format.amt_w_m_top}px;position: absolute;};"
-                                 class="col-8">
-                                <t t-if="default_format.is_word_bold">
-                                    <span style="font-weight:bold;text-transform: capitalize"
-                                          t-esc="o.check_amount_in_words"/>
-                                </t>
-<!--                                <t t-if="not default_format.is_word_bold">-->
-<!--                                    <span style="text-transform: capitalize" t-esc="default_format.is_amount_word"/>-->
-<!--                                </t>-->
-                            </div>
-                            <div t-attf-style="margin-left:#{default_format.amt_w_s_m_left}px;margin-top:#{default_format.amt_w_s_m_top}px;position: absolute;};"
-                                 class="col-8">
-                                <t t-if="default_format.is_word_bold">
-                                    <span style="font-weight:bold;text-transform: capitalize"
-                                          t-esc="o.check_amount_in_words"/>
-                                </t>
-                                <t t-if="not default_format.is_word_bold">
-                                    <span style="text-transform: capitalize" t-esc="o.check_amount_in_words"/>
-                                </t>
-                            </div>
-                        </t>
+                            <t t-if="default_format.is_free_one and o.text_free">
+                                <div t-attf-style="margin-left:#{default_format.f_one_margin_left}px;margin-top:#{default_format.f_one_margin_top}px;position: absolute;};">
+                                    <span style="text-transform: capitalize" t-esc="o.text_free"/>
+                                </div>
+                            </t>
 
 
-                        <t t-if="default_format.is_company">
-                            <div t-attf-style="margin-left:#{default_format.c_margin_left}px;margin-top:#{default_format.c_margin_top}px;position: absolute;};"
-                                 class="col-4">
-                                <span style="text-transform: capitalize" t-esc="o.company_id.name"/>
-                            </div>
-                        </t>
+                            <t t-if="default_format.is_free_two and o.text_free">
+                                <div t-attf-style="margin-left:#{default_format.f_two_margin_left}px;margin-top:#{default_format.f_two_margin_top}px;position: absolute;};">
+                                    <span style="text-transform: capitalize" t-esc="o.text_free"/>
+                                </div>
+                            </t>
 
-                        <t t-if="default_format.is_cheque_no and o.cheque_no">
-                            <div t-attf-style="margin-left:#{default_format.cheque_margin_left}px;margin-top:#{default_format.cheque_margin_top}px;position: absolute;};"
-                                 class="col-4">
-                                Cheque No.
-                                <span t-esc="o.cheque_no"/>
-                            </div>
-                        </t>
-
-
-                        <t t-if="default_format.is_free_one and o.text_free">
-                            <div t-attf-style="margin-left:#{default_format.f_one_margin_left}px;margin-top:#{default_format.f_one_margin_top}px;position: absolute;};">
-                                <span style="text-transform: capitalize" t-esc="o.text_free"/>
-                            </div>
-                        </t>
-
-
-                        <t t-if="default_format.is_free_two and o.text_free">
-                            <div t-attf-style="margin-left:#{default_format.f_two_margin_left}px;margin-top:#{default_format.f_two_margin_top}px;position: absolute;};">
-                                <span style="text-transform: capitalize" t-esc="o.text_free"/>
-                            </div>
-                        </t>
-
-                        <t t-if="default_format.is_stub">
-                            <div t-attf-style="margin-left:#{default_format.stub_margin_left}px;margin-top:#{default_format.stub_margin_top}px;position: absolute;"
-                                 class="col-12">
-                                <table class="table table-condensed" style="width:95%">
-                                    <t t-if="o.cheque_no">
+                            <t t-if="default_format.is_stub">
+                                <div t-attf-style="margin-left:#{default_format.stub_margin_left}px;margin-top:#{default_format.stub_margin_top}px;position: absolute;"
+                                     class="col-12">
+                                    <table class="table table-condensed" style="width:95%">
+                                        <t t-if="o.cheque_no">
+                                            <tr t-attf-style="font-size:#{default_format.font_size}px;">
+                                                <td colspan="4" class="text-right" style="border:1px solid #FFF">
+                                                    Cheque No.
+                                                    <span t-field="o.cheque_no"/>
+                                                </td>
+                                            </tr>
+                                        </t>
                                         <tr t-attf-style="font-size:#{default_format.font_size}px;">
-                                            <td colspan="4" class="text-right" style="border:1px solid #FFF">
-                                                Cheque No.
-                                                <span t-field="o.cheque_no"/>
+                                            <td colspan="2" class="text-center" style="border:1px solid #FFF">
+                                                <span t-field="o.partner_id.name"/>
+                                            </td>
+                                            <td colspan="2" class="text-center" style="border:1px solid #FFF">
+                                                Date:
+                                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m-%d-%Y')"/>
+
+
                                             </td>
                                         </tr>
-                                    </t>
-                                    <tr t-attf-style="font-size:#{default_format.font_size}px;">
-                                        <td colspan="2" class="text-center" style="border:1px solid #FFF">
-                                            <span t-field="o.partner_id.name"/>
-                                        </td>
-                                        <td colspan="2" class="text-center" style="border:1px solid #FFF">
-                                            Date:
-                                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%m-%d-%Y')"/>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr t-attf-style="font-size:#{default_format.font_size}px;">
-                                        <th style="border-bottom:1px solid #000">Date</th>
-                                        <th style="border-bottom:1px solid #000">Type</th>
-                                        <th style="border-bottom:1px solid #000">Reference</th>
-                                        <th style="border-bottom:1px solid #000" class="text-right">Payment</th>
-                                    </tr>
-                                    <tbody class="sale_tbody" t-attf-style="font-size:#{default_format.font_size}px;">
-                                        <tr>
-                                            <td>
-                                                <span t-field="o.date"/>
-                                            </td>
-
-                                            <td>
-                                                <span t-field="o.payment_type"/>
-                                            </td>
-
-                                            <td>
-                                                <span t-field="o.ref"/>
-                                            </td>
-
-                                            <td class="text-right">
-                                                <span t-field="o.amount"
-                                                      t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
-                                            </td>
+                                        <tr t-attf-style="font-size:#{default_format.font_size}px;">
+                                            <th style="border-bottom:1px solid #000">Date</th>
+                                            <th style="border-bottom:1px solid #000">Type</th>
+                                            <th style="border-bottom:1px solid #000">Reference</th>
+                                            <th style="border-bottom:1px solid #000" class="text-right">Payment</th>
                                         </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </t>
+                                        <tbody class="sale_tbody"
+                                               t-attf-style="font-size:#{default_format.font_size}px;">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="o.date"/>
+                                                </td>
 
-                        <t t-if="default_format.is_f_line_sig">
-                            <div t-attf-style="margin-left:#{default_format.f_sig_m_left}px;margin-top:#{default_format.f_sig_m_top}px;position: absolute;};">
-                                _______________________
-                            </div>
-                        </t>
+                                                <td>
+                                                    <span t-field="o.payment_type"/>
+                                                </td>
 
-                        <t t-if="default_format.is_s_line_sig">
-                            <div t-attf-style="margin-left:#{default_format.s_sig_m_left}px;margin-top:#{default_format.s_sig_m_top}px;position: absolute;};">
-                                _______________________
-                            </div>
-                        </t>
+                                                <td>
+                                                    <span t-field="o.ref"/>
+                                                </td>
+
+                                                <td class="text-right">
+                                                    <span t-field="o.amount"
+                                                          t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </t>
+
+                            <t t-if="default_format.is_f_line_sig">
+                                <div t-attf-style="margin-left:#{default_format.f_sig_m_left}px;margin-top:#{default_format.f_sig_m_top}px;position: absolute;};">
+                                    _______________________
+                                </div>
+                            </t>
+
+                            <t t-if="default_format.is_s_line_sig">
+                                <div t-attf-style="margin-left:#{default_format.s_sig_m_left}px;margin-top:#{default_format.s_sig_m_top}px;position: absolute;};">
+                                    _______________________
+                                </div>
+                            </t>
 
 
-                        <t t-if="default_format.print_journal">
-                            <div t-attf-style="margin-left:#{default_format.journal_margin_left}px;margin-top:#{default_format.journal_margin_top}px;position: absolute;};"
-                                 class="col-12">
-                                <table class="table table-condensed" style="width:95%">
-                                    <thead t-attf-style="font-size:#{default_format.font_size}px;">
-                                        <tr>
-                                            <th>Description</th>
-                                            <th>Date</th>
-                                            <th>Partner</th>
-                                            <th>Account</th>
-                                            <th class="text-right">Credit</th>
-                                            <th class="text-right">Debit</th>
-                                        </tr>
-                                    </thead>
-                                    <!--                                <tbody class="sale_tbody" t-attf-style="font-size:#{default_format.font_size}px;">-->
-                                    <!--                                    <tr t-foreach="o.move_id.line_ids" t-as="l">-->
-                                    <!--                                        <td>-->
-                                    <!--                                           <span t-field="l.move_id.name"/>-->
-                                    <!--                                        </td>-->
+                            <t t-if="default_format.print_journal">
+                                <div t-attf-style="margin-left:#{default_format.journal_margin_left}px;margin-top:#{default_format.journal_margin_top}px;position: absolute;};"
+                                     class="col-12">
+                                    <table class="table table-condensed" style="width:95%">
+                                        <thead t-attf-style="font-size:#{default_format.font_size}px;">
+                                            <tr>
+                                                <th>Description</th>
+                                                <th>Date</th>
+                                                <th>Partner</th>
+                                                <th>Account</th>
+                                                <th class="text-right">Credit</th>
+                                                <th class="text-right">Debit</th>
+                                            </tr>
+                                        </thead>
+                                        <!--                                <tbody class="sale_tbody" t-attf-style="font-size:#{default_format.font_size}px;">-->
+                                        <!--                                    <tr t-foreach="o.move_id.line_ids" t-as="l">-->
+                                        <!--                                        <td>-->
+                                        <!--                                           <span t-field="l.move_id.name"/>-->
+                                        <!--                                        </td>-->
 
-                                    <!--                                        <td>-->
-                                    <!--                                           <span t-field="l.date"/>-->
-                                    <!--                                        </td>-->
+                                        <!--                                        <td>-->
+                                        <!--                                           <span t-field="l.date"/>-->
+                                        <!--                                        </td>-->
 
-                                    <!--                                        <td>-->
-                                    <!--                                           <span t-field="l.partner_id.name"/>-->
-                                    <!--                                        </td>-->
+                                        <!--                                        <td>-->
+                                        <!--                                           <span t-field="l.partner_id.name"/>-->
+                                        <!--                                        </td>-->
 
-                                    <!--                                        <td>-->
-                                    <!--                                           <span t-field="l.account_id.name"/>-->
-                                    <!--                                        </td>-->
+                                        <!--                                        <td>-->
+                                        <!--                                           <span t-field="l.account_id.name"/>-->
+                                        <!--                                        </td>-->
 
-                                    <!--                                        <td class="text-right">-->
-                                    <!--                                           <span t-field="l.credit"-->
-                                    <!--                                            t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>-->
-                                    <!--                                        </td>-->
-                                    <!--                                        <td class="text-right">-->
-                                    <!--                                           <span t-field="l.debit"-->
-                                    <!--                                            t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>-->
-                                    <!--                                        </td>-->
-                                    <!--                                    </tr>-->
-                                    <!--                                </tbody>-->
-                                </table>
-                            </div>
-                        </t>
+                                        <!--                                        <td class="text-right">-->
+                                        <!--                                           <span t-field="l.credit"-->
+                                        <!--                                            t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>-->
+                                        <!--                                        </td>-->
+                                        <!--                                        <td class="text-right">-->
+                                        <!--                                           <span t-field="l.debit"-->
+                                        <!--                                            t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>-->
+                                        <!--                                        </td>-->
+                                        <!--                                    </tr>-->
+                                        <!--                                </tbody>-->
+                                    </table>
+                                </div>
+                            </t>
 
+                        </div>
                     </div>
-                                        </div>
 
                 </t>
 
@@ -353,15 +357,15 @@
                 <!--                    <div t-att-data-oe-model="o._name" t-att-data-oe-id="o.id" t-foreach="o._check_get_pages()"-->
                 <!--                         t-as="page" class="page article ckca_page ckca_bottom_page"-->
                 <!--                         t-attf-style="top: {{ o.company_id.account_check_printing_margin_top }}in; left: {{ o.company_id.account_check_printing_margin_left }}in; right: {{ o.company_id.account_check_printing_margin_right }}in;">-->
-                <!--                        &lt;!&ndash;                <t t-call="all_in_one_cheque.ckca_stub"><t t-set="stub_num" t-value="1"/></t>&ndash;&gt;-->
-                <!--                        &lt;!&ndash;                <t t-call="all_in_one_cheque.ckca_stub"><t t-set="stub_num" t-value="2"/></t>&ndash;&gt;-->
-                <!--                        &lt;!&ndash;                <t t-call="all_in_one_cheque.ckca_check" />&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                <t t-call="schoolsss.ckca_stub"><t t-set="stub_num" t-value="1"/></t>&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                <t t-call="schoolsss.ckca_stub"><t t-set="stub_num" t-value="2"/></t>&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                <t t-call="schoolsss.ckca_check" />&ndash;&gt;-->
                 <!--                    </div>-->
                 <!--                </t>-->
 
 
-        </t>
-        <!--            </t>-->
-    </template>
-</data>
-        </odoo>
+            </t>
+            <!--            </t>-->
+        </template>
+    </data>
+</odoo>
