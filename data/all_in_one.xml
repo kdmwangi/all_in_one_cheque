@@ -18,44 +18,11 @@
             <field name="dpi">90</field>
         </record>
 
-        <record id="action_print_check_top" model="ir.actions.report">
-            <field name="name">Print check (Top)</field>
-            <field name="model">account.payment</field>
-            <field name="report_type">qweb-pdf</field>
-            <field name="report_name">all_in_one_cheque.print_check_top</field>
-            <field name="report_file">all_in_one_cheque.print_check_top</field>
-            <field name="print_report_name">'check Top - %s' % (object.partner_id.name or '',)</field>
-            <field name="paperformat_id" ref="all_in_one_cheque.paperformat_check_ca"/>
-            <field name="attachment">'check_'+(object.partner_id.name)+'_'+(object.name)+'_top.pdf'</field>
-            <field name="attachment_use">True</field>
-        </record>
 
-        <record id="action_print_check_middle" model="ir.actions.report">
-            <field name="name">Print check (Middle)</field>
-            <field name="model">account.payment</field>
-            <field name="report_type">qweb-pdf</field>
-            <field name="report_name">all_in_one_cheque.print_check_middle</field>
-            <field name="report_file">all_in_one_cheque.print_check_middle</field>
-            <field name="print_report_name">'check Middle - %s' % (object.partner_id.name or '',)</field>
-            <field name="paperformat_id" ref="all_in_one_cheque.paperformat_check_ca"/>
-            <field name="attachment">'check_'+(object.partner_id.name)+'_'+(object.name)+'_middle.pdf'</field>
-            <field name="attachment_use">True</field>
-        </record>
 
-        <record id="action_print_check_bottom" model="ir.actions.report">
-            <field name="name">Print check (Bottom)</field>
-            <field name="model">account.payment</field>
-            <field name="report_type">qweb-pdf</field>
-            <field name="report_name">all_in_one_cheque.print_check_bottom</field>
-            <field name="report_file">all_in_one_cheque.print_check_bottom</field>
-            <field name="print_report_name">'check Bottom - %s' % (object.partner_id.name or '',)</field>
-            <field name="paperformat_id" ref="all_in_one_cheque.paperformat_check_ca"/>
-            <field name="attachment">'check_'+(object.partner_id.name)+'_'+(object.name)+'_bottom.pdf'</field>
-            <field name="attachment_use">True</field>
-        </record>
 
         <record id="action_print_blank" model="ir.actions.report">
-            <field name="name">Print blank (Bottom)</field>
+            <field name="name">All in One blank</field>
             <field name="model">account.payment</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">all_in_one_cheque.blank</field>

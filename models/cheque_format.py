@@ -99,13 +99,7 @@ class Cheque_Format(models.Model):
     footer_m_top = fields.Float('Footer From Top', default=240)
     footer_m_left = fields.Float('Footer From Left', default=240)
 
-    @api.constrains('set_default', 'company_id')
-    def _check_description(self):
-        for line in self:
-            if line.set_default:
-                line_ids = self.env['cheque.setting'].search([('set_default','=',True),('company_id','=',line.company_id.id)])
-                if len(line_ids) > 1:
-                    raise ValidationError("One Company have one default cheque template")
+
     @api.constrains('set_default')
     def check_for_format(self):
         if self.set_default:
